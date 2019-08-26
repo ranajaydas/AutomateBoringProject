@@ -17,6 +17,6 @@ def add_to_inventory(inventory: dict, loot: list) -> dict:
 
 
 inv = {'gold coin': 42, 'rope': 1}
-dragonLoot = ['gold coin', 'dagger', 'ruby', 'gold coin', 'gold coin', 'ruby']
+dragonLoot = ['gold coin', 'dagger', 'ruby', 'gold coin', 'gold coin', 'ruby', 'goober', 'dooby', 'dooby']
 inv = add_to_inventory(inv, dragonLoot)
 display_inventory(inv)
