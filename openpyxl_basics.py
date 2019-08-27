@@ -18,3 +18,4 @@ print(activesheet['A1'].value)
 # Attributes of cells
 c2 = activesheet['C2']
 print('Row {}, column {}, aka cell {} contains the value: {}'.format(c2.row, c2.column, c2.coordinate, c2.value))
+
