@@ -17,5 +17,11 @@ print(activesheet['A1'].value)
 
 # Attributes of cells
 c2 = activesheet['C2']
-print('Row {}, column {}, aka cell {} contains the value: {}'.format(c2.row, c2.column, c2.coordinate, c2.value))
+print('Row {}, column {}, aka cell {} contains the value: {}\n'.format(c2.row, c2.column, c2.coordinate, c2.value))
 
+# Print the whole excel table
+
+for row in range(1, activesheet.max_row+1):
+    for col in range(1, activesheet.max_column+1):
+        print(activesheet.cell(row=row, column=col).value, end='\t')
+    print()
