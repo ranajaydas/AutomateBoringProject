@@ -16,7 +16,7 @@ def backuptozip(folder_name :str) ->None:
 
     # Create a unique zipfile name
     while True:
-        zipfile_name = os.path.basename(folder_name) + '_' + str(number) + '_' + date_today + '.zip'
+        zipfile_name = 'zip_' + os.path.basename(folder_name) + '_' + str(number) + '_' + date_today + '.zip'
         if not os.path.exists(zipfile_name):           # check if the file exists
             break
         number += 1                                    # increment the number if the file exists
