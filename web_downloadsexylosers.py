@@ -2,11 +2,13 @@
 import requests
 import os
 import bs4
+import time
 
 base_url = 'http://sexylosers.com/comic/'                      # starting url
 last_comic_num = 285                                           # starting comic number
 os.makedirs('sexylosers', exist_ok=True)                       # store comics in ./sexylosers
 
+start_time = time.time()
 for i in range(last_comic_num, 0, -1):
     comic_num = ("{0:0=3d}".format(i))                         # uses 3 digits for the comic url number
     url = base_url + comic_num
@@ -33,4 +35,5 @@ for i in range(last_comic_num, 0, -1):
             image_file.write(chunk)
         image_file.close()
 
-print('Done!')
+end_time = time.time()
+print('Operation completed in {} seconds: '.format(end_time-start_time))
