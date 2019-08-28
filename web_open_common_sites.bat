@@ -1,0 +1,1 @@
+@py.exe C:\Users\Ranaj\Documents\Dropbox\Learning\Python\Automa~1\AutomateBoringProject\web_open_common_sites.py %*

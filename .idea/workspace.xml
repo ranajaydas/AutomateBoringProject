@@ -2,7 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfbcb02b-95d0-4fe6-98c3-e83780eb1371" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/read_census_excel.py" beforeDir="false" afterPath="$PROJECT_DIR$/read_census_excel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup_zip_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/zip_backup_files.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bulletpointadder.py" beforeDir="false" afterPath="$PROJECT_DIR$/basics_bulletpointadder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/census2010.py" beforeDir="false" afterPath="$PROJECT_DIR$/xl_census2010.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/censuspopdata.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/xl_censuspopdata.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/collatz.py" beforeDir="false" afterPath="$PROJECT_DIR$/basics_collatz.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/directorysize.py" beforeDir="false" afterPath="$PROJECT_DIR$/os_directorysize.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloadsexylosers.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_downloadsexylosers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloadxkcd.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_downloadxkcd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/xl_example.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory.py" beforeDir="false" afterPath="$PROJECT_DIR$/basics_inventory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luckygoogle.bat" beforeDir="false" afterPath="$PROJECT_DIR$/web_luckygoogle.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/luckygoogle.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_luckygoogle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapit.bat" beforeDir="false" afterPath="$PROJECT_DIR$/web_mapit.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapit.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_mapit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/open_common_sites.bat" beforeDir="false" afterPath="$PROJECT_DIR$/web_open_common_sites.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/open_common_sites.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_open_common_sites.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openpyxl_basics.py" beforeDir="false" afterPath="$PROJECT_DIR$/xl_openpyxl_basics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/os_Quiz_1_2019-08-02.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/produceSales.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/xl_produceSales.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pw.bat" beforeDir="false" afterPath="$PROJECT_DIR$/os_pw.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pw.py" beforeDir="false" afterPath="$PROJECT_DIR$/os_pw.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/randomquiz_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/os_randomquiz_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/read_census_excel.py" beforeDir="false" afterPath="$PROJECT_DIR$/xl_read_census.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/string_justification.py" beforeDir="false" afterPath="$PROJECT_DIR$/basics_string_justification.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticTacToe.py" beforeDir="false" afterPath="$PROJECT_DIR$/basics_TicTacToe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/walk_through_folders.py" beforeDir="false" afterPath="$PROJECT_DIR$/os_walk_through_folders.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,20 +37,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/read_census_excel.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="29" column="34" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="34" />
-              <folding>
-                <element signature="e#82#97#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -41,6 +54,11 @@
       <list>
         <option value="$PROJECT_DIR$/openpyxl_basics.py" />
         <option value="$PROJECT_DIR$/read_census_excel.py" />
+        <option value="$PROJECT_DIR$/web_open_common_sites.bat" />
+        <option value="$PROJECT_DIR$/web_mapit.bat" />
+        <option value="$PROJECT_DIR$/web_luckygoogle.bat" />
+        <option value="$PROJECT_DIR$/xl_openpyxl_basics.py" />
+        <option value="$PROJECT_DIR$/pw.bat" />
       </list>
     </option>
   </component>
@@ -86,7 +104,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.read_census_excel">
+  <component name="RunManager" selected="Python.xl_read_census">
     <configuration name="openpyxl_basics" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="AutomateBoringProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -99,7 +117,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/openpyxl_basics.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Ranaj\Documents\Dropbox\Learning\Python\Automate The Boring Stuff\AutomateBoringProject\xl_openpyxl_basics.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -120,7 +138,49 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/read_census_excel.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Ranaj\Documents\Dropbox\Learning\Python\Automate The Boring Stuff\AutomateBoringProject\xl_read_census.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="web_luckygoogle" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="AutomateBoringProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web_luckygoogle.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="xl_read_census" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="AutomateBoringProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/xl_read_census.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -131,6 +191,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.xl_read_census" />
+        <item itemvalue="Python.web_luckygoogle" />
         <item itemvalue="Python.read_census_excel" />
         <item itemvalue="Python.openpyxl_basics" />
       </list>
@@ -154,19 +216,25 @@
       <option name="presentableId" value="Default" />
       <updated>1566970609603</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="New file added for manipulation - produceSales.xlsx">
+      <created>1566977566708</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1566977566708</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1513" height="973" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2123056" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2123056" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32938388" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49966192" visible="true" weight="0.32938388" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49966192" weight="0.32938388" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3992891" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -198,28 +266,110 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added a code section to print the entire table" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a code section to print the entire table" />
+    <MESSAGE value="New file added for manipulation - produceSales.xlsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="New file added for manipulation - produceSales.xlsx" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/openpyxl_basics.py">
+    <entry file="file://$PROJECT_DIR$/xl_census2010.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/os_walk_through_folders.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zip_backup_files.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basics_bulletpointadder.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/os_directorysize.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_downloadsexylosers.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_open_common_sites.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_open_common_sites.bat">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        <state>
+          <caret column="92" selection-start-column="92" selection-end-column="92" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/census2010.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/read_census_excel.py">
+    <entry file="file://$PROJECT_DIR$/web_mapit.bat">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="29" column="34" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="34" />
+        <state>
+          <caret column="92" selection-start-column="92" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_luckygoogle.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="92" selection-start-column="92" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_luckygoogle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="57" lean-forward="true" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
+          <folding>
+            <element signature="e#91#108#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basics_collatz.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xl_read_census.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="e#82#97#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xl_openpyxl_basics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basics_inventory.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/os_pw.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/os_pw.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="91" selection-start-column="91" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/os_randomquiz_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1040">
+          <folding>
+            <element signature="e#328#341#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basics_string_justification.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

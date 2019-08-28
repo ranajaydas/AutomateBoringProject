@@ -1,0 +1,2 @@
+@py.exe C:\Users\Ranaj\Documents\Dropbox\Learning\Python\Automa~1\AutomateBoringProject\os_pw.py %*
+@pause
