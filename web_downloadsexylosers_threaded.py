@@ -59,11 +59,12 @@ files_to_download = list_pending_files(latest_comic)
 files_to_download = split_list(files_to_download, num_threads)
 download_threads = []                                                 # list of all the Thread objects
 start_time = time.time()                                              # Timestamp start time
-for download_chunk in files_to_download:                              # creates multiple threads
-    download_thread = threading.Thread(target=download_sexylosers, args=list(download_chunk))
+
+# creates multiple threads and start downloading
+for download_chunk in files_to_download:
+    download_thread = threading.Thread(target=download_sexylosers, args=(download_chunk,))
     download_threads.append(download_thread)
     download_thread.start()
-    print(download_chunk)
 
 # Wait for all threads to end.
 for download_thread in download_threads:
@@ -71,3 +72,10 @@ for download_thread in download_threads:
 
 end_time = time.time()                                               # Timestamp end time
 print('Operation completed in {} seconds.'.format(end_time-start_time))
+
+# check for missing files
+pending_downloads = list_pending_files(latest_comic)
+if pending_downloads:
+    print('The following comics were not downloaded:\n', pending_downloads)
+else:
+    print('All comics successfully downloaded!')
