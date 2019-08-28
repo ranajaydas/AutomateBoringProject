@@ -4,10 +4,10 @@ import os
 import bs4
 
 base_url = 'http://sexylosers.com/comic/'                      # starting url
-comic_num = 285                                                # starting comic number
+last_comic_num = 285                                                 # starting comic number
 os.makedirs('sexylosers', exist_ok=True)                       # store comics in ./sexylosers
 
-for i in range (285, 0, -1):
+for i in range(last_comic_num, 0, -1):
     comic_num = ("{0:0=3d}".format(i))                         # uses 3 digits for the comic url number
     url = base_url + comic_num
 
