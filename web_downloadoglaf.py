@@ -7,6 +7,7 @@ import bs4
 url = 'https://oglaf.com/cumsprite'                             # Starting URL...I'm serious
 os.makedirs('oglaf', exist_ok=True)                             # Store comics in ./oglaf
 os.chdir('./oglaf')                                             # change directory to ./oglaf
+counter = 1
 
 while True:
     print('Downloading page {}...'.format(url))
@@ -26,7 +27,7 @@ while True:
             res.raise_for_status()
 
             # Save the image to ./oglaf
-            image_file = open(os.path.join(os.path.basename(comic_url)), 'wb')
+            image_file = open(str(counter) + '_' + os.path.basename(comic_url), 'wb')
             for chunk in res.iter_content(100000):
                 image_file.write(chunk)
             image_file.close()
@@ -38,5 +39,6 @@ while True:
         print('Reached final page.')
         break
     url = 'https://oglaf.com' + next_link.get('href')
+    counter += 1
 
 print('Done!')
