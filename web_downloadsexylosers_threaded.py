@@ -28,7 +28,7 @@ def split_list(input_list: list, n: int) -> list:
 
 def download_sexylosers(comic_list: list) -> None:
     """ Initiates a download from sexylosers.com for a list of comics """
-    base_url = 'http://sexylosers.com/comic/'                           # Starting URL
+    base_url = 'https://sexylosers.com/comic/'                           # Starting URL
 
     for comic_num in comic_list:
         if not(os.path.isfile(comic_num + '.jpg')):                     # Check if comic already exists
@@ -36,6 +36,7 @@ def download_sexylosers(comic_list: list) -> None:
             print('Downloading page {}...'.format(url))
             res = requests.get(url)                                     # Downloads the entire URL into res
             res.raise_for_status()                                      # Raises exception if the download has problems
+
             soup = bs4.BeautifulSoup(res.text, features="html.parser")  # Create a BeautifulSoup object
 
             # Find the URL of the comic image.
