@@ -21,13 +21,15 @@ while True:
         print('Could not find comic image.')
     else:
         comic_url = comic_elem[0].get('src')
-        if not(os.path.isfile(os.path.basename(comic_url))):        # Check if the file already exists
+        filename = str(counter) + '_' + os.path.basename(comic_url)
+
+        if not(os.path.isfile(filename)):        # Check if the file already exists
             print('Downloading image {}...'.format(comic_url))
             res = requests.get(comic_url)                           # Download the image.
             res.raise_for_status()
 
             # Save the image to ./oglaf
-            image_file = open(str(counter) + '_' + os.path.basename(comic_url), 'wb')
+            image_file = open(filename, 'wb')
             for chunk in res.iter_content(100000):
                 image_file.write(chunk)
             image_file.close()
