@@ -4,5 +4,6 @@ xkcd
 twilio*
 email*
 imap*
+smtp*
 chromedriver.exe
 .idea/workspace.xml
