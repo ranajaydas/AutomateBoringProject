@@ -7,12 +7,15 @@ from PIL import Image, ImageDraw, ImageFont
 
 
 url = 'https://oglaf.com/cumsprite'                             # Starting URL...I'm serious
-os.makedirs('oglaf', exist_ok=True)                             # Store comics in ./oglaf
-os.chdir('./oglaf')                                             # change directory to ./oglaf
+os.makedirs('oglaf', exist_ok=True)                             # Store comics in ./oglaf/unprocessed
+os.makedirs('oglaf/unprocessed', exist_ok=True)                 # Store comics in ./oglaf/unprocessed
+os.chdir('./oglaf/unprocessed')                                 # change directory to ./oglaf/unprocessed
 counter = 1
 
 
 def save_alttext(alttext_name: str, alttext_value: str) -> None:
+    """ Saves the given alt texts as an image file"""
+
     fonts_folder = 'C:\\Windows\\Fonts'
     arial_font = ImageFont.truetype(os.path.join(fonts_folder, 'arial.ttf'), 14)
 
@@ -23,9 +26,11 @@ def save_alttext(alttext_name: str, alttext_value: str) -> None:
 
 
 def save_image(filename: str, img_url: str) -> None:
-    if not (os.path.isfile(filename)):  # Check if the file already exists
+    """ Saves the URL as an image file """
+
+    if not (os.path.isfile(filename)):                          # Check if the file already exists
         print('Downloading image {}...'.format(img_url))
-        res = requests.get(img_url)  # Download the image.
+        res = requests.get(img_url)                             # Download the image.
         res.raise_for_status()
 
         # Save the image to ./oglaf
