@@ -3,10 +3,10 @@ import os
 import numpy
 import time
 import threading
-import re
+from PIL import Image
 
 os.chdir('./oglaf/unprocessed')                                     # change directory to ./oglaf/unprocessed
-num_multi_threads = 10                                               # Specify number of threads for multi-threading
+num_multi_threads = 15                                              # Specify number of threads for multi-threading
 
 
 def count_comics(directory: str) -> int:
@@ -20,20 +20,35 @@ def split_list(input_list: list, n: int) -> list:
     return numpy.array_split(input_list, n)
 
 
-def join_comics(comic_chunk):
+def join_comics(comic_chunk) -> None:
+    """ Joins the comic title, comic and alttext images and resizes them """
     file_list = os.listdir(os.getcwd())
-    not_found = []
 
     for comic_num in comic_chunk:
-        title = str(comic_num) + '_title.gif'
-        alttext = str(comic_num) + '_alttext.png'
-        regex = re.compile('re.escape(comic_num)_(.*).jpg')
-        for file in file_list:
-            mo = regex.search(file)
-            print(mo.group(1))
+        # Store the names for the Title, Comic and Alttext into variables
+        prefix = str(comic_num) + '_'
+        title = prefix + 'title.gif'
+        alttext = prefix + 'alttext.png'
 
-        if os.path.isfile(title) and os.path.isfile(alttext):
-            print(alttext, title)
+        for file in file_list:
+            if file.startswith(prefix) and file.endswith('.jpg'):
+                comic = file
+                comic_text_only = file.split('.')[0]
+
+        # Create a collage image
+        print('Creating collage for {}...'.format(comic_text_only))
+        collage_img = Image.new('RGB', (800, 680), (204, 204, 204, 255))       # Create a blank image
+        title_img = Image.open(title)
+        comic_img = Image.open(comic)
+        alttext_img = Image.open(alttext)
+        collage_img.paste(title_img, (20, 5))
+        collage_img.paste(comic_img, (20, 36))
+        collage_img.paste(alttext_img, (20, 632))
+
+        # Resize the collage image and save it
+        print('Resizing {}...'.format(comic_text_only))
+        final_img = collage_img.resize((1200, 1020), Image.ANTIALIAS)
+        final_img.save('../' + comic_text_only + '_PROCESSED.jpg')
 
 
 def multithread(files_to_process: list) -> None:
@@ -55,6 +70,6 @@ def multithread(files_to_process: list) -> None:
     print('Operation completed in {} seconds.'.format(end_time - start_time))
 
 
-comic_list = list(range(1, count_comics(os.getcwd())))
+comic_list = list(range(1, count_comics(os.getcwd())+1))
 comic_list_split = split_list(comic_list, num_multi_threads)
 multithread(comic_list_split)
