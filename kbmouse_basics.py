@@ -26,3 +26,10 @@ for i in range(5):
 # Get the mouse position
 print('The mouse is at', pyautogui.position())
 
+# Clicking the mouse
+pyautogui.click()
+
+# Clicking the right mouse button at a specified position
+pyautogui.click(100, 100, button='Right')
+
+
