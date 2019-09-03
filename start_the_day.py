@@ -8,6 +8,9 @@ pdf_path = '../automate-the-boring-stuff-with-python-2015-.pdf'
 music_url = 'https://youtu.be/y9eFk8TuV9k'
 start_at_1 = '?t=1'
 
+# Choose between spotify, Youtube
+music_source = 'spotify'
+
 
 # Open the Automate Boring Stuff pdf
 proc1 = subprocess.Popen(['start', pdf_path], shell=True)
@@ -24,10 +27,16 @@ os.startfile(os.getcwd())
 print('Opened Current Working Directory...')
 
 
-# Open the Web Links
-if 'youtu' in music_url:
-    music_url += start_at_1
+# Open music
+if music_source is 'youtube':
+    if 'youtu' in music_url:
+        music_url += start_at_1
+    webbrowser.open(music_url, 1)
 
-webbrowser.open(music_url, 1)
+elif music_source is 'spotify':
+    proc3 = subprocess.Popen(r'C:\Users\Ranaj\AppData\Roaming\Spotify\Spotify.exe')
+
+
+# Open the Web Links
 webbrowser.open('https://github.com/ranajaydas/AutomateBoringProject', 2)
 print('Opened all urls...')
