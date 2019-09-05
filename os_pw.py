@@ -1,5 +1,5 @@
 #! python3
-"""This is an insecure password locker program"""
+"""This is an insecure password locker program."""
 
 import sys
 import pyperclip

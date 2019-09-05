@@ -1,4 +1,4 @@
-""" Simple Selenium Program to play the game 2048 """
+"""Simple Selenium Program to play the game 2048."""
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys

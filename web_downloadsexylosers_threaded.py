@@ -14,7 +14,7 @@ num_multi_threads = 5                                               # Specify nu
 
 
 def list_pending_files(last_comic: int) -> list:
-    """ Returns a list of .jpg files pending download """
+    """Returns a list of .jpg files pending download."""
     pending_files = [str("{0:0=3d}".format(num))                    # List Generator (3 digit format)
                      for num in range(1, last_comic+1)
                      if not (os.path.isfile(str("{0:0=3d}".format(num)) + '.jpg'))]     # Check if the file exists
@@ -22,12 +22,12 @@ def list_pending_files(last_comic: int) -> list:
 
 
 def split_list(input_list: list, n: int) -> list:
-    """ Splits an input list into n parts"""
+    """Splits an input list into n parts."""
     return numpy.array_split(input_list, n)
 
 
 def download_sexylosers(comic_list: list) -> None:
-    """ Initiates a download from sexylosers.com for a list of comics """
+    """Initiates a download from sexylosers.com for a list of comics."""
     base_url = 'https://sexylosers.com/comic/'                           # Starting URL
 
     for comic_num in comic_list:
@@ -58,7 +58,7 @@ def download_sexylosers(comic_list: list) -> None:
 
 
 def multithread(files_to_download: list) -> None:
-    """ Creates multiple threads of download based on an input split list of comics """
+    """Creates multiple threads of download based on an input split list of comics."""
     download_threads = []                                               # List of all the Thread objects
     start_time = time.time()                                            # Timestamp start time
 
@@ -77,7 +77,7 @@ def multithread(files_to_download: list) -> None:
 
 
 def check_missing(last_comic: int) -> list:
-    """ Checks for any missing files """
+    """Checks for any missing files."""
     pending_downloads = list_pending_files(last_comic)                  # Check for missing files
     if pending_downloads:
         print('The following comics were not downloaded:\n', pending_downloads)
@@ -87,7 +87,7 @@ def check_missing(last_comic: int) -> list:
 
 
 def initiate(last_comic: int, num_threads: int) -> None:
-    """ Initiates the checking and download process """
+    """Initiates the checking and download process."""
     files_to_download = list_pending_files(last_comic)                  # Create a list of files to be downloaded
     files_to_download = split_list(files_to_download, num_threads)      # Split the list based on number of threads
     multithread(files_to_download)                                      # Initiate multi-threaded download

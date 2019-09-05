@@ -1,15 +1,14 @@
-""" A Simple Program to Open Relevant Programs at the start of the day """
+"""A Simple Program to Open Relevant Programs at the start of the day."""
 
 import os
 import subprocess
 import webbrowser
-import time
 
 pdf_path = '../automate-the-boring-stuff-with-python-2015-.pdf'
 music_url = 'https://youtu.be/y9eFk8TuV9k'
 start_at_1 = '?t=1'
 
-# Choose between spotify, Youtube
+# Choose between Spotify, Youtube
 music_source = 'spotify'
 
 

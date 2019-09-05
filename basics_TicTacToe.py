@@ -1,3 +1,5 @@
+"""Simple game of tic-tac-toe."""
+
 theBoard = {'1': ' ', '2': ' ', '3': ' ',
             '4': ' ', '5': ' ', '6': ' ',
             '7': ' ', '8': ' ', '9': ' '}
@@ -8,6 +10,7 @@ all_previous_moves = set()
 
 
 def printboard(board: dict) -> None:
+    """Prints an empty board."""
     print()
     print('{}|{}|{}\t\t1|2|3'.format(board['1'], board['2'], board['3']))
     print('-+-+-\t\t-+-+-')
@@ -18,6 +21,7 @@ def printboard(board: dict) -> None:
 
 
 def checkwinner(board: dict) -> None:
+    """Checks for a winner."""
     check_rows = board['1'] == board['2'] == board['3'] != ' ' or \
                  board['4'] == board['5'] == board['6'] != ' ' or \
                  board['7'] == board['8'] == board['9'] != ' '
@@ -34,6 +38,7 @@ def checkwinner(board: dict) -> None:
 
 
 def declarewinner():
+    """Declares who the winner is."""
     global game_over
     global whose_turn
     print('The winner is:', whose_turn)
@@ -41,6 +46,7 @@ def declarewinner():
 
 
 def checkdraw():
+    """Checks for draws."""
     if all_possible_moves == all_previous_moves:
         print("It's a draw!")
         global game_over
@@ -48,6 +54,7 @@ def checkdraw():
 
 
 def flipturn():
+    """Flips the turn between 'X' and 'O'."""
     global whose_turn
     if whose_turn == 'X':
         whose_turn = 'O'
@@ -55,8 +62,7 @@ def flipturn():
         whose_turn = 'X'
 
 
-""" Print the empty board and start the game!"""
-
+# Start of program
 printboard(theBoard)
 while not game_over:
     coordinate = input("It is {}'s turn. Please enter a move on the board [1-9]: ".format(whose_turn))

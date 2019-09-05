@@ -1,6 +1,6 @@
-""" For this program to work correctly, chromedriver.exe needs
-    to be installed in the same folder. Download chromedriver
-    from https://chromedriver.chromium.org/downloads"""
+"""Some basic Selenium commands.
+
+Requires chromedriver from https://chromedriver.chromium.org/downloads."""
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys

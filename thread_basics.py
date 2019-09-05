@@ -1,3 +1,5 @@
+"""Simple program to illustrate threading."""
+
 import threading
 import time
 print('Start of program.')

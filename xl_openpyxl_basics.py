@@ -1,3 +1,5 @@
+"""Basics of openpyxl."""
+
 import openpyxl
 wb = openpyxl.load_workbook("xl_example.xlsx")
 

@@ -1,4 +1,4 @@
-""" Program to update the prices in an excel file, xl_produceSales.xlsx """
+"""Program to update the prices in an excel file."""
 
 import openpyxl
 from openpyxl.styles import Font

@@ -1,4 +1,4 @@
-""" Lots of fun image operations on the Oglaf comics from web_downloadoglaf.py """
+"""Lots of fun image operations on the Oglaf comics from web_downloadoglaf.py"""
 import os
 import numpy
 import time
@@ -10,18 +10,18 @@ num_multi_threads = 15                                              # Specify nu
 
 
 def count_comics(directory: str) -> int:
-    """ Counts the number of files in a folder, divided by 3 """
+    """Counts the number of files in a folder, divided by 3."""
     onlyfiles = next(os.walk(directory))[2]
     return int(len(onlyfiles)/3)
 
 
 def split_list(input_list: list, n: int) -> list:
-    """ Splits an input list into n parts"""
+    """Splits an input list into n parts."""
     return numpy.array_split(input_list, n)
 
 
 def join_comics(comic_chunk) -> None:
-    """ Joins the comic title, comic and alttext images and resizes them """
+    """Joins the comic title, comic and alttext images and resizes them."""
     file_list = os.listdir(os.getcwd())
 
     for comic_num in comic_chunk:
@@ -52,7 +52,7 @@ def join_comics(comic_chunk) -> None:
 
 
 def multithread(files_to_process: list) -> None:
-    """ Creates multiple threads of download based on an input split list of comics """
+    """Creates multiple threads of download based on an input split list of comics."""
     process_threads = []                                               # List of all the Thread objects
     start_time = time.time()                                           # Timestamp start time
 
@@ -70,6 +70,7 @@ def multithread(files_to_process: list) -> None:
     print('Operation completed in {} seconds.'.format(end_time - start_time))
 
 
+# Start of program
 comic_list = list(range(1, count_comics(os.getcwd())+1))
 comic_list_split = split_list(comic_list, num_multi_threads)
 multithread(comic_list_split)

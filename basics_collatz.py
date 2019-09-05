@@ -5,7 +5,8 @@ Then write a program that lets the user type in an integer and that keeps
 calling collatz() on that number until the function returns the value 1.
 (Amazingly enough, this sequence actually works for any integer—sooner
 or later, using this sequence, you’ll arrive at 1! Even mathematicians aren’t
-sure why. Your program is exploring what’s called the Collatz sequence, sometimes called “the simplest impossible math problem.”)
+sure why. Your program is exploring what’s called the Collatz sequence,
+sometimes called “the simplest impossible math problem.”)
 Remember to convert the return value from input() to an integer with
 the int() function; otherwise, it will be a string value."""
 

@@ -1,3 +1,4 @@
+"""Draws an imperfect spiral on MS Paint!"""
 import pyautogui
 import subprocess
 import time

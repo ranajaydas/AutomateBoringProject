@@ -1,4 +1,4 @@
-""" A program that takes backups of a specified directory and auto-increments the backup number """
+"""Takes backups of a specified directory and auto-increments the backup number."""
 
 import os
 import zipfile
@@ -8,7 +8,8 @@ folder_to_backup = 'C:\\Users\\Ranaj\\Documents\\Dropbox\\Learning\\' \
                    'Python\\Automate The Boring Stuff\\AutomateBoringProject\\Quiz'
 
 
-def backuptozip(folder_name :str) ->None:
+def backuptozip(folder_name: str) -> None:
+    """Takes backups of a specified directory and auto-increments the backup number."""
     folder_name = os.path.abspath(folder_name)         # make sure folder is absolute
     date_today = str(date.today())                     # create a variable containing today's date
     number = 1                                         # postfix to be added to filename

@@ -1,4 +1,4 @@
-""" Prints the total size of all the files in a specified path """
+"""Prints the total size of all the files in a specified path."""
 
 import os
 

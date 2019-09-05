@@ -1,4 +1,4 @@
-""" Some basic functions using pyautogui """
+"""Some basic functions using pyautogui."""
 import pyautogui
 
 # Show the size of the screen

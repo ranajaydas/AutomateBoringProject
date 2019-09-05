@@ -1,5 +1,5 @@
 #! python3
-"""Adds a * at the beginning of each line in any text copied from the clipboard"""
+"""Adds a * at the beginning of each line in any text copied from the clipboard."""
 
 import pyperclip
 

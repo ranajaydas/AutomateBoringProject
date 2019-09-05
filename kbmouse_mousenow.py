@@ -1,5 +1,5 @@
-""" Shows the current position on the screen for the mouse
-    Note: This program only works on cmd
+"""Shows the current position on the screen for the mouse.
+Note: This program only works on cmd.
 """
 
 import pyautogui

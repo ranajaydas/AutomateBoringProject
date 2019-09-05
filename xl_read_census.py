@@ -1,4 +1,4 @@
-""" Takes a boring excel file containing census data and tabulates the totals """
+"""Takes a boring excel file containing census data and tabulates the totals."""
 import openpyxl
 import pprint
 

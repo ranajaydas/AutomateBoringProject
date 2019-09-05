@@ -1,6 +1,4 @@
-""" Walks through all the files and subfolders in a specified path"""
-
-
+"""Walks through all the files and subfolders in a specified path."""
 import os
 
 pathname = 'C:\\Intel'

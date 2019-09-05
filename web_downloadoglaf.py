@@ -14,7 +14,7 @@ counter = 1
 
 
 def save_alttext(alttext_name: str, alttext_value: str) -> None:
-    """ Saves the given alt texts as an image file"""
+    """Saves the given alt texts as an image file."""
 
     fonts_folder = 'C:\\Windows\\Fonts'
     arial_font = ImageFont.truetype(os.path.join(fonts_folder, 'arial.ttf'), 14)
@@ -26,14 +26,14 @@ def save_alttext(alttext_name: str, alttext_value: str) -> None:
 
 
 def save_image(filename: str, img_url: str) -> None:
-    """ Saves the URL as an image file """
+    """Saves the provided URL as an image file."""
 
     if not (os.path.isfile(filename)):                          # Check if the file already exists
         print('Downloading image {}...'.format(img_url))
         res = requests.get(img_url)                             # Download the image.
         res.raise_for_status()
 
-        # Save the image to ./oglaf
+        # Save the image
         image_file = open(filename, 'wb')
         for chunk in res.iter_content(100000):
             image_file.write(chunk)

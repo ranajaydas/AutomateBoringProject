@@ -1,4 +1,4 @@
-"""Downloads a given range of XKCD comics using multi-threading"""
+"""Downloads a given range of XKCD comics using multi-threading."""
 import requests
 import os
 import bs4
@@ -6,6 +6,7 @@ import threading
 
 
 def xkcd_download(starting_comic: int, ending_comic: int) -> None:
+    """Downloads a given range of XKCD comics."""
     for urlnumber in range(starting_comic, ending_comic+1):
         if urlnumber == 404:                                                             # Skip comic #404
             continue
