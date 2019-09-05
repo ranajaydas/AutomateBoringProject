@@ -7,4 +7,5 @@ imap*
 smtp*
 chromedriver.exe
 *citibank*
-.idea/workspace.xml
+__pycache__/
+.idea
