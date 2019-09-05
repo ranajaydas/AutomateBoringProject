@@ -15,9 +15,9 @@ num_multi_threads = 5                                               # Specify nu
 
 def list_pending_files(last_comic: int) -> list:
     """Returns a list of .jpg files pending download."""
-    pending_files = [str("{0:0=3d}".format(num))                    # List Generator (3 digit format)
+    pending_files = [str(num).zfill(3)                                                 # List Generator (3 digit format)
                      for num in range(1, last_comic+1)
-                     if not (os.path.isfile(str("{0:0=3d}".format(num)) + '.jpg'))]     # Check if the file exists
+                     if not (os.path.isfile(str("{0:0=3d}".format(num)) + '.jpg'))]    # Check if the file exists
     return pending_files
 
 
@@ -96,7 +96,12 @@ def initiate(last_comic: int, num_threads: int) -> None:
         initiate(last_comic, num_threads)                               # Recursive loop until all files downloaded
 
 
-initiate(latest_comic, num_multi_threads)                               # The ON switch!
-key_press = input("Press 'Y' to open the comics folder:")
-if key_press.lower() == 'y':
-    os.startfile(os.getcwd())                                           # Open the comics folder
+def main():
+    initiate(latest_comic, num_multi_threads)                               # The ON switch!
+    key_press = input("Press 'Y' to open the comics folder:")
+    if key_press.lower() == 'y':
+        os.startfile(os.getcwd())                                           # Open the comics folder
+
+
+if __name__ == '__main__':
+    main()
