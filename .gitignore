@@ -9,3 +9,4 @@ chromedriver.exe
 *citibank*
 __pycache__/
 .idea
+venv/
