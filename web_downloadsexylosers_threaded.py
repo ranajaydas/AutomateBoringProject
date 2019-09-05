@@ -15,9 +15,9 @@ num_multi_threads = 5                                               # Specify nu
 
 def list_pending_files(last_comic: int) -> list:
     """Returns a list of .jpg files pending download."""
-    pending_files = [str(num).zfill(3)                                                 # List Generator (3 digit format)
+    pending_files = [str(num).zfill(3)                                       # List Generator (3 digit format)
                      for num in range(1, last_comic+1)
-                     if not (os.path.isfile(str("{0:0=3d}".format(num)) + '.jpg'))]    # Check if the file exists
+                     if not (os.path.isfile(str(num).zfill(3) + '.jpg'))]    # Check if the file exists
     return pending_files
 
 
