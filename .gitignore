@@ -7,5 +7,3 @@ imap*
 smtp*
 chromedriver.exe
 *citibank*
-__pycache__/
-.idea
