@@ -70,7 +70,11 @@ def multithread(files_to_process: list) -> None:
     print('Operation completed in {} seconds.'.format(end_time - start_time))
 
 
-# Start of program
-comic_list = list(range(1, count_comics(os.getcwd())+1))
-comic_list_split = split_list(comic_list, num_multi_threads)
-multithread(comic_list_split)
+def main():
+    comic_list = list(range(1, count_comics(os.getcwd())+1))
+    comic_list_split = split_list(comic_list, num_multi_threads)
+    multithread(comic_list_split)
+
+
+if __name__ == '__main__':
+    main()
