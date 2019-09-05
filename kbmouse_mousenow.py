@@ -7,21 +7,21 @@ import pyautogui
 print('Press Ctrl-C to quit.')
 try:
     while True:
-        # Get the mouse coordinates
+        # Get the mouse position
         x, y = pyautogui.position()
-        position = 'X: ' + str(x).rjust(4) + ' Y: ' + str(y).rjust(4)
 
         # Get the RGB value at this position
         pixel_colour = pyautogui.screenshot().getpixel((x, y))
-        position += '\tRGB: ' \
-                    + str(pixel_colour[0]).rjust(4) + ',' \
-                    + str(pixel_colour[1]).rjust(4) + ',' \
-                    + str(pixel_colour[2]).rjust(4)
 
-        print(position, end='')
+        # Create a string for position and color
+        position_and_color = 'X: {:4} Y: {:4} | RGB: {:4},{:4},{:4}'.format(x,
+                                                                            y,
+                                                                            pixel_colour[0],
+                                                                            pixel_colour[1],
+                                                                            pixel_colour[2])
 
-        # Erase the last value
-        print('\b' * len(position), end='', flush=True)
+        print(position_and_color, end='')
+        print('\b'*len(position_and_color), end='', flush=True)             # Erase the last value
 
 except KeyboardInterrupt:
     print('\nDone.')
