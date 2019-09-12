@@ -76,31 +76,17 @@ def multithread(files_to_download: list) -> None:
     print('Operation completed in {} seconds.'.format(end_time - start_time))
 
 
-def check_missing(last_comic: int) -> list:
-    """Checks for any missing files."""
-    pending_downloads = list_pending_files(last_comic)                  # Check for missing files
-    if pending_downloads:
-        print('The following comics were not downloaded:\n', pending_downloads)
-    else:
-        print('All comics successfully downloaded!\n')
-    return pending_downloads
-
-
-def initiate(last_comic: int, num_threads: int) -> None:
-    """Initiates the checking and download process."""
-    files_to_download = list_pending_files(last_comic)                  # Create a list of files to be downloaded
-    files_to_download = split_list(files_to_download, num_threads)      # Split the list based on number of threads
-    multithread(files_to_download)                                      # Initiate multi-threaded download
-    missing_files = check_missing(last_comic)                           # Check for any missing files
-    if missing_files:
-        initiate(last_comic, num_threads)                               # Recursive loop until all files downloaded
-
-
 def main():
-    initiate(latest_comic, num_multi_threads)                               # The ON switch!
-    key_press = input("Press 'Y' to open the comics folder:")
-    if key_press.lower() == 'y':
-        os.startfile(os.getcwd())                                           # Open the comics folder
+    """Initiates the checking and download process."""
+    files_to_download = list_pending_files(latest_comic)                   # Create a list of files to be downloaded
+    files_to_download = split_list(files_to_download, num_multi_threads)   # Split the list based on number of threads
+    multithread(files_to_download)                                         # Initiate multi-threaded download
+    missing_files = list_pending_files(latest_comic)                       # Check for any missing files
+
+    if missing_files:
+        print('**** The following comics were not downloaded:\n', missing_files)
+        main()                                                             # Recursive loop until all files downloaded
+    print('All comics successfully downloaded!\n')
 
 
 if __name__ == '__main__':
