@@ -65,7 +65,6 @@ def download_sexylosers(comic_list: list) -> None:
 def multithread(files_to_download: list) -> None:
     """Creates multiple threads of download based on an input split list of comics."""
     download_threads = []                                               # List of all the Thread objects
-    start_time = time.time()                                            # Timestamp start time
 
     # creates multiple threads and start downloading
     for download_chunk in files_to_download:                            # Iterate the split list chunk by chunk
@@ -76,9 +75,6 @@ def multithread(files_to_download: list) -> None:
     # Wait for all threads to end.
     for download_thread in download_threads:
         download_thread.join()
-
-    end_time = time.time()                                              # Timestamp end time
-    print('Operation completed in {} seconds.'.format(end_time - start_time))
 
 
 def main():
@@ -95,4 +91,7 @@ def main():
 
 
 if __name__ == '__main__':
+    start_time = time.time()                                               # Timestamp start time
     main()
+    end_time = time.time()                                                 # Timestamp end time
+    print('Operation completed in {} seconds.'.format(end_time - start_time))
