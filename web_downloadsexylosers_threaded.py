@@ -10,7 +10,7 @@ import numpy                                                        # Used for s
 os.makedirs('sexylosers', exist_ok=True)                            # Store comics in ./sexylosers
 os.chdir('./sexylosers')                                            # change directory to ./sexylosers
 latest_comic = 285                                                  # The latest comic number available online
-num_multi_threads = 5                                               # Specify number of threads for multi-threading
+num_multi_threads = 10                                              # Specify number of threads for multi-threading
 
 
 def list_pending_files(last_comic: int) -> list:
@@ -34,8 +34,13 @@ def download_sexylosers(comic_list: list) -> None:
         if not(os.path.isfile(comic_num + '.jpg')):                     # Check if comic already exists
             url = base_url + comic_num
             print('Downloading page {}...'.format(url))
-            res = requests.get(url)                                     # Downloads the entire URL into res
-            res.raise_for_status()                                      # Raises exception if the download has problems
+            try:
+                res = requests.get(url)                                 # Downloads the entire URL into res
+                res.raise_for_status()                                  # Raises exception if the download has problems
+            except requests.exceptions.ConnectionError as err:
+                print('**** Cool it on the requests yo! Error:', err)
+            except Exception as err:
+                print('**** An error occurred:', err)
 
             soup = bs4.BeautifulSoup(res.text, features="html.parser")  # Create a BeautifulSoup object
 
