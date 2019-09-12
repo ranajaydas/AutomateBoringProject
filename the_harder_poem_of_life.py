@@ -1,11 +1,9 @@
-"""The Slightly Less Reader Friendly Poem of Life"""
+"""The Slightly Less Reader Friendly Poem of Life."""
 
-cycles = 15         # The number of cycles you have to repeat
+cycles = 5         # The number of cycles you have to repeat
 
-end_words = ['flame', 'breath', 'embrace', 'thread\n',
-             'milk', 'love', 'kiss', 'shove\n',
-             'hook',
-             'song', 'rhyme', 'dance', 'time\n']
+end_words = ['flame', 'breath', 'embrace', 'thread\n', 'milk', 'love', 'kiss', 'shove\n',
+             'hook', 'song', 'rhyme', 'dance', 'time\n']
 
 hook_words = {'darkness\n': 'Shine\n',
               'sorrow\n': 'Cry\n',
@@ -28,14 +26,20 @@ def cycle_with_suffix(num):
 
 # The hook of the poem
 def the_hook(num):
+    hook = ''
+    article = ''
+
     if num < cycles:
         start = 'If life is '
-        for hook_word in hook_words:
-            hook = start + hook_word + hook_words[hook_word]
     else:
         start = 'Life is THE '
-        for hook_word in hook_words:
-            hook = start + hook_word + hook_words[hook_word]
+
+    for k, v in hook_words.items():
+        if k == 'song\n' and num < cycles:
+            article = 'a '
+        elif k == 'sky\n' and num < cycles:
+            article = 'the '
+        hook += start + article + k + v
 
     return hook
 
@@ -46,17 +50,12 @@ for cycle in range(1, cycles+1):
     for word in end_words:
         if word == 'hook':
             print('Such is life\n\n{}'.format(the_hook(cycle)))
+        elif word == 'time\n':
+            print('Your {0} {1}'.format(cycle_with_suffix(cycle), word))
         else:
             print('The {0} {1}'.format(cycle_with_suffix(cycle), word))
 
     if cycle == cycles-1:
-        print("""
-        Learn this poem by heart
-        For its lines, they repeat
-        """)
+        print('Learn this poem by heart\nFor its lines, they repeat\n')
 
-
-print("""
-Such is the poem of life
-Recite it well
-""")
+print('Such is the poem of life\nRecite it well')
