@@ -10,3 +10,4 @@ chromedriver.exe
 __pycache__/
 .idea
 venv/
+web_coinmarketcap*
