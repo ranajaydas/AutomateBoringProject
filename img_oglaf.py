@@ -4,9 +4,13 @@ import numpy
 import time
 import threading
 from PIL import Image
+from multiprocessing import Process
 
-os.chdir('./oglaf/unprocessed')                                     # change directory to ./oglaf/unprocessed
+if not str(os.getcwd()).endswith('unprocessed'):
+    os.chdir('./oglaf/unprocessed')                                 # change directory to ./oglaf/unprocessed
 num_multi_threads = 15                                              # Specify number of threads for multi-threading
+use_multiprocess = False                                             # Decide whether or not to use multi-processing
+num_multi_process = 3                                               # Specify number of processes for multi-processing
 
 
 def count_comics(directory: str) -> int:
@@ -54,7 +58,6 @@ def join_comics(comic_chunk) -> None:
 def multithread(files_to_process: list) -> None:
     """Creates multiple threads of download based on an input split list of comics."""
     process_threads = []                                               # List of all the Thread objects
-    start_time = time.time()                                           # Timestamp start time
 
     # creates multiple threads and start downloading
     for process_chunk in files_to_process:                             # Iterate the split list chunk by chunk
@@ -66,15 +69,34 @@ def multithread(files_to_process: list) -> None:
     for process_thread in process_threads:
         process_thread.join()
 
-    end_time = time.time()                                             # Timestamp end time
-    print('Operation completed in {} seconds.'.format(end_time - start_time))
+
+def multiprocess(files_to_process: list) -> None:
+    """Creates multiple processes based on an input split list of comics."""
+    processes = []                                               # List of all the multi-process objects
+
+    # creates multiple processes
+    for process_chunk in files_to_process:                             # Iterate the split list chunk by chunk
+        process = Process(target=multithread, args=(process_chunk,))
+        processes.append(process)
+        process.start()
+
+    # Wait for all threads to end.
+    for process in processes:
+        process.join()
 
 
 def main():
     comic_list = list(range(1, count_comics(os.getcwd())+1))
-    comic_list_split = split_list(comic_list, num_multi_threads)
-    multithread(comic_list_split)
+    comic_list_split1 = split_list(comic_list, num_multi_threads)
+    if use_multiprocess:
+        comic_list_split2 = split_list(comic_list_split1, num_multi_process)
+        multiprocess(comic_list_split2)
+    else:
+        multithread(comic_list_split1)
 
 
 if __name__ == '__main__':
+    start_time = time.time()                                           # Timestamp start time
     main()
+    end_time = time.time()                                             # Timestamp end time
+    print('Operation completed in {} seconds.'.format(end_time - start_time))
