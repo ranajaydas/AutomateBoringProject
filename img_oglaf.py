@@ -9,8 +9,8 @@ from multiprocessing import Process
 if not str(os.getcwd()).endswith('unprocessed'):
     os.chdir('./oglaf/unprocessed')                                 # change directory to ./oglaf/unprocessed
 num_multi_threads = 15                                              # Specify number of threads for multi-threading
-use_multiprocess = False                                             # Decide whether or not to use multi-processing
-num_multi_process = 3                                               # Specify number of processes for multi-processing
+use_multiprocess = True                                             # Decide whether or not to use multi-processing
+num_multi_process = 10                                               # Specify number of processes for multi-processing
 
 
 def count_comics(directory: str) -> int:
