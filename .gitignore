@@ -11,3 +11,5 @@ __pycache__/
 .idea
 venv/
 web_coinmarketcap*
+*google_api*
+*.json
